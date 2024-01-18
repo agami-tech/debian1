@@ -23,9 +23,9 @@ CURLcode curl_easy_setopt(CURL *handle, CURLOPT_SASL_AUTHZID, char *authzid);
 
 # DESCRIPTION
 
-Pass a char * as parameter, which should be pointing to the null-terminated
-authorization identity (*authzid*) for the transfer. Only applicable to
-the PLAIN SASL authentication mechanism where it is optional.
+Pass a char pointer as parameter, which should be pointing to the
+null-terminated authorization identity (*authzid*) for the transfer. Only
+applicable to the PLAIN SASL authentication mechanism where it is optional.
 
 When not specified only the authentication identity (*authcid*) as
 specified by the username is sent to the server, along with the password. The

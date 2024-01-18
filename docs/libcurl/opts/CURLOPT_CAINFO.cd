@@ -26,8 +26,8 @@ CURLcode curl_easy_setopt(CURL *handle, CURLOPT_CAINFO, char *path);
 
 # DESCRIPTION
 
-Pass a char * to a null-terminated string naming a file holding one or more
-certificates to verify the peer with.
+Pass a char pointer to a null-terminated string naming a file holding one or
+more certificates to verify the peer with.
 
 If *CURLOPT_SSL_VERIFYPEER(3)* is zero and you avoid verifying the
 server's certificate, *CURLOPT_CAINFO(3)* need not even indicate an

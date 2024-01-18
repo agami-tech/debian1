@@ -25,7 +25,7 @@ CURLcode curl_easy_setopt(CURL *handle, CURLOPT_PROXY_ISSUERCERT, char *file);
 
 # DESCRIPTION
 
-Pass a char * to a null-terminated string naming a *file* holding a CA
+Pass a char pointer to a null-terminated string naming a *file* holding a CA
 certificate in PEM format. If the option is set, an additional check against
 the peer certificate is performed to verify the issuer of the the HTTPS proxy
 is indeed the one associated with the certificate provided by the option.

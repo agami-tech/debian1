@@ -26,7 +26,7 @@ CURLcode curl_easy_setopt(CURL *handle, CURLOPT_PROXY_CRLFILE, char *file);
 
 This option is for connecting to an HTTPS proxy, not an HTTPS server.
 
-Pass a char * to a null-terminated string naming a *file* with the
+Pass a char pointer to a null-terminated string naming a *file* with the
 concatenation of CRL (in PEM format) to use in the certificate validation that
 occurs during the SSL exchange.
 

@@ -25,10 +25,10 @@ CURLcode curl_easy_setopt(CURL *handle, CURLOPT_POSTFIELDS, char *postdata);
 
 # DESCRIPTION
 
-Pass a char * as parameter, pointing to the data buffer to use in an HTTP POST
-operation. The data must be formatted and encoded the way you want the server
-to receive it. libcurl does not convert or encode it in any way. For example,
-the web server may assume that this data is URL encoded.
+Pass a char pointer as parameter, pointing to the data buffer to use in an
+HTTP POST operation. The data must be formatted and encoded the way you want
+the server to receive it. libcurl does not convert or encode it in any
+way. For example, the web server may assume that this data is URL encoded.
 
 The data pointed to is NOT copied by the library: as a consequence, it must be
 preserved by the calling application until the associated transfer finishes.

@@ -24,10 +24,10 @@ CURLcode curl_easy_setopt(CURL *handle, CURLOPT_COPYPOSTFIELDS, char *data);
 
 # DESCRIPTION
 
-Pass a char * as parameter, which should be the full *data* to post in a
-HTTP POST operation. It behaves as the *CURLOPT_POSTFIELDS(3)* option, but
-the original data is instead copied by the library, allowing the application
-to overwrite the original data after setting this option.
+Pass a char pointer as parameter, which should be the full *data* to post in a
+HTTP POST operation. It behaves as the *CURLOPT_POSTFIELDS(3)* option, but the
+original data is instead copied by the library, allowing the application to
+overwrite the original data after setting this option.
 
 Because data are copied, care must be taken when using this option in
 conjunction with *CURLOPT_POSTFIELDSIZE(3)* or

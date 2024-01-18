@@ -24,10 +24,10 @@ CURLcode curl_easy_setopt(CURL *handle, CURLOPT_DNS_INTERFACE, char *ifname);
 
 # DESCRIPTION
 
-Pass a char * as parameter. Set the name of the network interface that the DNS
-resolver should bind to. This must be an interface name (not an address). Set
-this option to NULL to use the default setting (do not bind to a specific
-interface).
+Pass a char pointer as parameter. Set the name of the network interface that
+the DNS resolver should bind to. This must be an interface name (not an
+address). Set this option to NULL to use the default setting (do not bind to a
+specific interface).
 
 The application does not have to keep the string around after setting this
 option.

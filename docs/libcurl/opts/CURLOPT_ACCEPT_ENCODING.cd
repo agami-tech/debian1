@@ -23,7 +23,7 @@ CURLcode curl_easy_setopt(CURL *handle, CURLOPT_ACCEPT_ENCODING, char *enc);
 
 # DESCRIPTION
 
-Pass a char * argument specifying what encoding you would like.
+Pass a char pointer argument specifying what encoding you would like.
 
 Sets the contents of the Accept-Encoding: header sent in an HTTP request, and
 enables decoding of a response when a Content-Encoding: header is received.

@@ -7,7 +7,7 @@ Source: libcurl
 See-also: fprintf (3)
 See-also: printf (3)
 See-also: sprintf (3)
-See-also: vprintf (3) 
+See-also: vprintf (3)
 ---
 
 # NAME
@@ -173,8 +173,8 @@ string for **s** and **S** conversions.
 
 ## h
 
-A following integer conversion corresponds to a *short* or *unsigned
-shortfP argument.
+A following integer conversion corresponds to a *short* or *unsigned short*
+argument.
 
 ## l
 

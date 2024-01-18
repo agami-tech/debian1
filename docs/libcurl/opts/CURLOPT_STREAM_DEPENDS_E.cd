@@ -25,8 +25,8 @@ CURLcode curl_easy_setopt(CURL *handle, CURLOPT_STREAM_DEPENDS_E,
 
 # DESCRIPTION
 
-Pass a CURL * pointer in *dephandle* to identify the stream within the
-same connection that this stream is depending upon exclusively. That means it
+Pass a CURL pointer in *dephandle* to identify the stream within the same
+connection that this stream is depending upon exclusively. That means it
 depends on it and sets the Exclusive bit.
 
 The spec says "Including a dependency expresses a preference to allocate
@@ -38,10 +38,10 @@ reprioritized stream.
 
 This option can be set during transfer.
 
-*dephandle* must not be the same as *handle*, that makes this function
-return an error. It must be another easy handle, and it also needs to be a
-handle of a transfer that is about to be sent over the same HTTP/2 connection
-for this option to have an actual effect.
+*dephandle* must not be the same as *handle*, that makes this function return
+an error. It must be another easy handle, and it also needs to be a handle of
+a transfer that is about to be sent over the same HTTP/2 connection for this
+option to have an actual effect.
 
 # DEFAULT
 

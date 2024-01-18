@@ -23,8 +23,8 @@ CURLcode curl_easy_setopt(CURL *handle, CURLOPT_EGDSOCKET, char *path);
 
 Deprecated option. It serves no purpose anymore.
 
-Pass a char * to the null-terminated path name to the Entropy Gathering Daemon
-socket. It is used to seed the random engine for TLS.
+Pass a char poitner to the null-terminated path name to the Entropy Gathering
+Daemon socket. It is used to seed the random engine for TLS.
 
 The application does not have to keep the string around after setting this
 option.

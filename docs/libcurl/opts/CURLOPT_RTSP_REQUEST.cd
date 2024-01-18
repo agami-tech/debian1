@@ -35,11 +35,10 @@ for this method.
 ## CURL_RTSPREQ_DESCRIBE
 
 Used to get the low level description of a stream. The application should note
-what formats it understands in the *'Accept:'* header. Unless set
-manually, libcurl automatically adds in *'Accept: application/sdp'*.
-Time-condition headers are added to Describe requests if the
-*CURLOPT_TIMECONDITION(3)* option is used. **(The session ID is not
-needed for this method)fP
+what formats it understands in the *'Accept:'* header. Unless set manually,
+libcurl automatically adds in *'Accept: application/sdp'*. Time-condition
+headers are added to Describe requests if the *CURLOPT_TIMECONDITION(3)*
+option is used. (The session ID is not needed for this method)
 
 ## CURL_RTSPREQ_ANNOUNCE
 

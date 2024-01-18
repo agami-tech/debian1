@@ -38,9 +38,9 @@ The trailing headers included in the linked list must not be CRLF-terminated,
 because libcurl adds the appropriate line termination characters after each
 header item.
 
-If you use curl_slist_append to add trailing headers to the curl_slist then
-libcurl duplicates the strings, and frees the curl_slist and the duplicates
-once the trailers have been sent.
+If you use *curl_slist_append(3)* to add trailing headers to the *curl_slist*
+then libcurl duplicates the strings, and frees the *curl_slist* once the
+trailers have been sent.
 
 If one of the trailing header fields is not formatted correctly it is ignored
 and an info message is emitted.
@@ -61,7 +61,7 @@ NULL
 HTTP
 
 # EXAMPLE
-
+~~~c
 #include <curl/curl.h>
 
 static int trailer_cb(struct curl_slist **tr, void *data)
@@ -96,10 +96,10 @@ if(curl) {
 
   curl_slist_free_all(headers);
 }
-
+~~~
 # AVAILABILITY
 
-This option was added in curl 7.64.0 and is present if HTTP support is enabled
+This option was added in curl 7.64.0 and is present if HTTP support is enabled.
 
 # RETURN VALUE
 

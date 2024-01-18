@@ -34,7 +34,7 @@ The backend can be identified by the *id*
 **CURLSSLBACKEND_NONE** as *id*). If both *id* and *name* are
 specified, the *name* is ignored.
 
-If neither *id* nor fPnamefP are specified, the function fails with
+If neither *id* nor *name* are specified, the function fails with
 **CURLSSLSET_UNKNOWN_BACKEND** and set the *avail* pointer to the
 NULL-terminated list of available backends. The available backends are those
 that this particular build of libcurl supports.

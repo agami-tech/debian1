@@ -23,9 +23,9 @@ CURLcode curl_easy_setopt(CURL *handle, CURLOPT_RTSP_TRANSPORT,
 
 # DESCRIPTION
 
-Pass a char * to tell libcurl what to pass for the Transport: header for this
-RTSP session. This is mainly a convenience method to avoid needing to set a
-custom Transport: header for every SETUP request. The application must set a
+Pass a char pointer to tell libcurl what to pass for the Transport: header for
+this RTSP session. This is mainly a convenience method to avoid needing to set
+a custom Transport: header for every SETUP request. The application must set a
 Transport: header before issuing a SETUP request.
 
 The application does not have to keep the string around after setting this

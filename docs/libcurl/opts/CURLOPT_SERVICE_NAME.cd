@@ -23,7 +23,7 @@ CURLcode curl_easy_setopt(CURL *handle, CURLOPT_SERVICE_NAME, char *name);
 
 # DESCRIPTION
 
-Pass a char * as parameter to a string holding the *name* of the service
+Pass a char pointer as parameter to a string holding the *name* of the service
 for DIGEST-MD5, SPNEGO and Kerberos 5 authentication mechanisms. The default
 service names are "ftp", "HTTP", "imap", "ldap", "pop" and "smtp". This option
 allows you to change them.

@@ -26,9 +26,9 @@ CURLcode curl_easy_setopt(CURL *handle, CURLOPT_AWS_SIGV4, char *param);
 
 Provides AWS V4 signature authentication on HTTP(S) header.
 
-Pass a char * that is the collection of specific arguments are used for
-creating outgoing authentication headers.  The format of the *param*
-option is:
+Pass a char pointer that is the collection of specific arguments are used for
+creating outgoing authentication headers. The format of the *param* option
+is:
 
 ## provider1[:provider2[:region[:service]]]
 

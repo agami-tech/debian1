@@ -25,9 +25,9 @@ CURLcode curl_easy_setopt(CURL *handle, CURLOPT_PROXY_TLSAUTH_USERNAME,
 
 # DESCRIPTION
 
-Pass a char * as parameter, which should point to the null-terminated username
-to use for the HTTPS proxy TLS authentication method specified with the
-*CURLOPT_PROXY_TLSAUTH_TYPE(3)* option. Requires that the
+Pass a char pointer as parameter, which should point to the null-terminated
+username to use for the HTTPS proxy TLS authentication method specified with
+the *CURLOPT_PROXY_TLSAUTH_TYPE(3)* option. Requires that the
 *CURLOPT_PROXY_TLSAUTH_PASSWORD(3)* option also be set.
 
 The application does not have to keep the string around after setting this

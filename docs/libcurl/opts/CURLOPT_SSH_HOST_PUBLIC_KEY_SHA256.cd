@@ -24,9 +24,9 @@ CURLcode curl_easy_setopt(CURL *handle, CURLOPT_SSH_HOST_PUBLIC_KEY_SHA256,
 
 # DESCRIPTION
 
-Pass a char * pointing to a string containing a Base64-encoded SHA256 hash of
-the remote host's public key.  The transfer fails if the given hash does not
-match the hash the remote host provides.
+Pass a char pointer pointing to a string containing a Base64-encoded SHA256
+hash of the remote host's public key. The transfer fails if the given hash
+does not match the hash the remote host provides.
 
 
 # DEFAULT

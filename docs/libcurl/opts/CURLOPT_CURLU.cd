@@ -27,8 +27,8 @@ CURLcode curl_easy_setopt(CURL *handle, CURLOPT_CURLU, CURLU *pointer);
 
 # DESCRIPTION
 
-Pass in a pointer to the *URL* handle to work with. The parameter should
-be a *CURLU **. Setting *CURLOPT_CURLU(3)* explicitly overrides
+Pass in a pointer to the *URL* handle to work with. The parameter should be a
+*CURLU pointer*. Setting *CURLOPT_CURLU(3)* explicitly overrides
 *CURLOPT_URL(3)*.
 
 *CURLOPT_URL(3)* or *CURLOPT_CURLU(3)* **must** be set before a

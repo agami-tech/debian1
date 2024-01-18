@@ -23,7 +23,7 @@ CURLcode curl_easy_setopt(CURL *handle, CURLOPT_CRLFILE, char *file);
 
 # DESCRIPTION
 
-Pass a char * to a null-terminated string naming a *file* with the
+Pass a char pointer to a null-terminated string naming a *file* with the
 concatenation of CRL (in PEM format) to use in the certificate validation that
 occurs during the SSL exchange.
 

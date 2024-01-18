@@ -23,8 +23,8 @@ CURLcode curl_easy_setopt(CURL *handle, CURLOPT_USERPWD, char *userpwd);
 
 # DESCRIPTION
 
-Pass a char * as parameter, pointing to a null-terminated login details string
-for the connection. The format of which is: [user name]:[password].
+Pass a char pointer as parameter, pointing to a null-terminated login details
+string for the connection. The format of which is: [user name]:[password].
 
 When using Kerberos V5 authentication with a Windows based server, you should
 specify the user name part with the domain name in order for the server to
@@ -36,7 +36,7 @@ without the domain name should the server be part of a single domain and
 forest.
 
 To specify the domain name use either Down-Level Logon Name or UPN (User
-Principal Name) formats. For example, EXAMPLEuser and user@example.com
+Principal Name) formats. For example **EXAMPLE\user** and **user@example.com**
 respectively.
 
 Some HTTP servers (on Windows) support inclusion of the domain for Basic

@@ -24,9 +24,9 @@ CURLcode curl_easy_setopt(CURL *handle, CURLOPT_RANGE, char *range);
 
 # DESCRIPTION
 
-Pass a char * as parameter, which should contain the specified range you want
-to retrieve. It should be in the format "X-Y", where either X or Y may be left
-out and X and Y are byte indexes.
+Pass a char pointer as parameter, which should contain the specified range you
+want to retrieve. It should be in the format "X-Y", where either X or Y may be
+left out and X and Y are byte indexes.
 
 HTTP transfers also support several intervals, separated with commas as in
 *"X-Y,N-M"*. Using this kind of multiple intervals causes the HTTP server
