@@ -26,11 +26,9 @@ AUTOMAKE_OPTIONS = foreign no-dependencies
 
 include Makefile.inc
 
-man_DISTMANS = $(man_MANS:.3=.3.dist)
-
 CURLPAGES = $(man_MANS:.3=.cd)
 
-CLEANFILES = $(man_DISTMANS) $(man_MANS)
+CLEANFILES = $(man_MANS)
 
 EXTRA_DIST = $(man_MANS) $(CURLPAGES) CMakeLists.txt
 

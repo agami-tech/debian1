@@ -30,14 +30,13 @@ man_MANS = $(abs_builddir)/curl.1
 noinst_man_MANS = curl.1 mk-ca-bundle.1
 dist_man_MANS = curl-config.1
 CURLPAGES = curl-config.cd mk-ca-bundle.cd
-MANDISTPAGES = curl.1.dist curl-config.1.dist
 
 # Build targets in this file (.) before cmdline-opts to ensure that
 # the curl.1 rule below runs first
 SUBDIRS = . cmdline-opts libcurl
 DIST_SUBDIRS = $(SUBDIRS) examples
 
-CLEANFILES = $(MANDISTPAGES) $(man_MANS) curl.1 curl-config.1 mk-ca-bundle.1
+CLEANFILES = $(man_MANS) curl.1 curl-config.1 mk-ca-bundle.1
 
 EXTRA_DIST =                                    \
  $(CURLPAGES)                                   \

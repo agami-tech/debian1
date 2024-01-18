@@ -28,15 +28,12 @@ SUBDIRS = opts
 
 include Makefile.inc
 
-man_DISTMANS = $(man_MANS:.3=.3.dist)
-
 CURLPAGES = $(man_MANS:.3=.cd)
 
 m4macrodir = $(datadir)/aclocal
 dist_m4macro_DATA = libcurl.m4
 
-CLEANFILES = $(TESTS) $(man_DISTMANS) $(man_MANS) \
-  libcurl-symbols.3
+CLEANFILES = $(TESTS) $(man_MANS) libcurl-symbols.3
 
 EXTRA_DIST = $(CURLPAGES) ABI.md symbols-in-versions symbols.pl  \
   mksymbolsmanpage.pl CMakeLists.txt
