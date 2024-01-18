@@ -30,24 +30,17 @@ man_DISTMANS = $(man_MANS:.3=.3.dist)
 
 CURLPAGES = $(man_MANS:.3=.cd)
 
-CLEANFILES = $(CURLPAGES) $(man_DISTMANS)
+CLEANFILES = $(man_DISTMANS) $(man_MANS)
 
-EXTRA_DIST = $(man_MANS) CMakeLists.txt
+EXTRA_DIST = $(man_MANS) $(CURLPAGES) CMakeLists.txt
 
-NROFF2CD= $(top_srcdir)/scripts/nroff2cd $< >$@
+CD2NROFF = $(top_srcdir)/scripts/cd2nroff $< >$@
+CD2 = $(CD2_$(V))
+CD2_0 = @echo "  RENDER " $@;
+CD2_1 =
+CD2_ = $(CD2_0)
 
 SUFFIXES = .3 .cd
 
-2cd: $(CURLPAGES)
-
-.3.cd:
-	$(NROFF2CD)
-
-mancheck:
-	@(cd $(top_srcdir)/docs/libcurl/opts && ls `awk -F, '!/OBSOLETE/ && /^  CINIT/ { a=substr($$1, 9); print "CURLOPT_" a ".3"}' $(top_srcdir)/include/curl/curl.h`)
-	rm -f in_temp
-	@(for a in $(man_MANS); do echo $$a >>in_temp; done)
-	sort in_temp > in_makefile
-	ls CURL*.3 > in_directory
-	-diff -u in_makefile in_directory
-	rm in_temp in_directory in_makefile
+.cd.3:
+	$(CD2)$(CD2NROFF)

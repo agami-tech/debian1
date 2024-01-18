@@ -37,9 +37,10 @@ MANDISTPAGES = curl.1.dist curl-config.1.dist
 SUBDIRS = . cmdline-opts libcurl
 DIST_SUBDIRS = $(SUBDIRS) examples
 
-CLEANFILES = $(CURLPAGES) $(MANDISTPAGES) curl.1
+CLEANFILES = $(MANDISTPAGES) $(man_MANS) curl.1 curl-config.1 mk-ca-bundle.1
 
 EXTRA_DIST =                                    \
+ $(CURLPAGES)                                   \
  $(noinst_man_MANS)                             \
  ALTSVC.md                                      \
  BINDINGS.md                                    \
@@ -96,7 +97,12 @@ EXTRA_DIST =                                    \
  VULN-DISCLOSURE-POLICY.md                      \
  WEBSOCKET.md
 
-NROFF2CD= $(top_srcdir)/scripts/nroff2cd $< >$@
+CD2NROFF = $(top_srcdir)/scripts/cd2nroff $< >$@
+
+CD2 = $(CD2_$(V))
+CD2_0 = @echo "  RENDER " $@;
+CD2_1 =
+CD2_ = $(CD2_0)
 
 SUFFIXES = .1 .html
 
@@ -114,11 +120,10 @@ $(abs_builddir)/curl.1:
 		&& touch -r "$(srcdir)/curl.1" $@; fi
 	cd cmdline-opts && $(MAKE)
 
-2cd: $(CURLPAGES)
-	cd libcurl && $(MAKE) 2cd
+.cd.1:
+	$(CD2)$(CD2NROFF)
 
-.1.cd:
-	$(NROFF2CD)
+curl-config.1: curl-config.cd
 
 distclean:
 	rm -f $(CLEANFILES)

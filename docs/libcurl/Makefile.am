@@ -35,24 +35,25 @@ CURLPAGES = $(man_MANS:.3=.cd)
 m4macrodir = $(datadir)/aclocal
 dist_m4macro_DATA = libcurl.m4
 
-CLEANFILES = $(CURLPAGES) $(TESTS) $(man_DISTMANS) \
+CLEANFILES = $(TESTS) $(man_DISTMANS) $(man_MANS) \
   libcurl-symbols.3
 
-EXTRA_DIST = $(man_MANS) ABI.md symbols-in-versions symbols.pl  \
+EXTRA_DIST = $(CURLPAGES) ABI.md symbols-in-versions symbols.pl  \
   mksymbolsmanpage.pl CMakeLists.txt
 
-NROFF2CD= $(top_srcdir)/scripts/nroff2cd $< >$@
+CD2NROFF = $(top_srcdir)/scripts/cd2nroff $< >$@
+CD2 = $(CD2_$(V))
+CD2_0 = @echo "  RENDER " $@;
+CD2_1 =
+CD2_ = $(CD2_0)
 
 SUFFIXES = .3 .html
 
 libcurl-symbols.3: $(srcdir)/symbols-in-versions $(srcdir)/mksymbolsmanpage.pl
-	perl $(srcdir)/mksymbolsmanpage.pl < $(srcdir)/symbols-in-versions > $@
+	$(CD2)perl $(srcdir)/mksymbolsmanpage.pl < $(srcdir)/symbols-in-versions > $@
 
-2cd: $(CURLPAGES)
-	cd opts && $(MAKE) 2cd
-
-.3.cd:
-	$(NROFF2CD)
+.cd.3:
+	$(CD2)$(CD2NROFF)
 
 # Make sure each option man page is referenced in the main man page
 TESTS = check-easy check-multi
