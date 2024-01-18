@@ -4,6 +4,7 @@ SPDX-License-Identifier: curl
 Title: curl_version_info
 Section: 3
 Source: libcurl
+See-also: curl_version (3)
 ---
 
 # NAME

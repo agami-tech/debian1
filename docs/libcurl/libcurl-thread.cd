@@ -4,6 +4,7 @@ SPDX-License-Identifier: curl
 Title: libcurl-thread
 Section: 3
 Source: libcurl
+See-also: libcurl-security (3)
 ---
 
 # NAME
